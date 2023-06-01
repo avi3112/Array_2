@@ -1,0 +1,27 @@
+// An array is monotonic if it is either monotone increasing or monotone decreasing.
+
+// An array nums is monotone increasing if for all i <= j, nums[i] <= nums[j]. An array nums is
+// monotone decreasing if for all i <= j, nums[i] >= nums[j].
+
+// Given an integer array nums, return true if the given array is monotonic, or false otherwise.
+
+// Example 1:
+// Input: nums = [1,2,2,3]
+// Output: true 
+
+
+function checkmono(nums) {
+    for(let i=0;i<nums.length-1;i++){
+        if(nums[i]>nums[i+1]){
+            return false
+        }return true
+    }
+    for(let j=0;j<nums.length-1;j++){
+        if(nums[j]<nums[j+1]){
+            return false
+        }return true
+    }
+}
+
+const result= checkmono([1,2,2,3])
+console.log(result)
